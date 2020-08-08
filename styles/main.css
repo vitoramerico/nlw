@@ -19,14 +19,6 @@
     --color-box-base: #FFFFFF;
     --color-box-footer: #FAFAFC;
     --color-small-info: #C1BCCC;
-    /* Tamanho das fontes */
-    /* Tamanho padrao das fontes: 
-        16px - Nao e relativo
-        100% - Relativo, depende do tamanho do pai 
-        1em  - Relativo, depende do tamanho do pai 
-        1rem - Relativo, depende apenas do tamanho do root
-    */
-    /* controle das medidas rem (Relativo, depende do tamanho do font-size do root)*/
     font-size: 60%;
 }
 
@@ -36,17 +28,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Box model (div) */
-
-#container {
-    width: 90vw;
-    max-width: 700px;
-    /* top,right,bottom,left */
-    /* padding: 40px 10px 40px 10px; */
-    /* top=40,right=10,bottom=40,left=10 */
-    /* margin: 40px 10px; */
 }
 
 html, body {
@@ -66,4 +47,16 @@ body, input, button, textarea {
     font-size: 1.6rem;
     font-family: Poppins;
     color: var(--color-text-base);
+}
+
+#container {
+    width: 90vw;
+    max-width: 700px;
+}
+
+@media(min-width: 700px) {
+    :root {
+        /* todo 1rem vai ser relativo a 10px */
+        font-size: 62.5%;
+    }
 }
